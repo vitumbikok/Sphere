@@ -1,25 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mzimba Holy Cross Church</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('worship.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    header {
+      background-color: darkblue;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .site-title {
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+    }
+
+    nav li {
+      cursor: pointer;
+    }
+
+    nav li:hover {
+      color: skyblue;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      background: white;
+      margin: 5px;
+      width: 25px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: darkblue;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 1em;
+        border-radius: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    #main {
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    #inside {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem;
+      padding: 1rem;
+      border: solid black;
+      border-radius: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #inside h3 {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 1rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="logo.jpg" alt="Church Logo">
+      <h4 class="site-title">MZIMBA HOLY CROSS CHURCH</h4>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Skills & Tools</li>
-            <li>Blog</li>
-            <li>Contact</li>
-        </ul>
+      <ul id="nav-links">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Programs</li>
+        <li>Contact Us</li>
+      </ul>
     </nav>
-    
-<h1>Welcome to My Website</h1>
-<h2>About</h2>
+  </header>
+
+  <h1 id="main">THE HOME OF REVIVAL AND EXCELLENCE</h1>
+
+  <div id="inside">
+    <div><h3>Deliverance</h3></div>
+    <div><h3>Worship</h3></div>
+    <div><h3>Testimonies</h3></div>
+  </div>
+
+  <section>
+    <h2>Welcome!</h2>
+    <p>Welcome to Mzimba Holy Cross Church — a place of healing, transformation, and powerful worship. We are a community rooted in the Word of God, committed to spiritual growth and revival.</p>
+  </section>
+
+  <section>
+    <h2>Service Times</h2>
+    <p>Sunday Worship: 9:00 AM - 12:00 PM<br>Bible Study: Wednesdays at 5:00 PM<br>Prayer Night: Fridays at 6:00 PM</p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>Email: info@holycrossmzimba.org<br>Phone: +265 999 123 456</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mzimba Holy Cross Church. All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
